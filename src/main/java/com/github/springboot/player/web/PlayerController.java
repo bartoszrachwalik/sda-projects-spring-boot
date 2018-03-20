@@ -20,4 +20,11 @@ public class PlayerController {
         model.addAttribute("players", service.findAll());
         return "players";
     }
+
+    @GetMapping("/top-secret")
+    public String secret(Model model) {
+        model.addAttribute("players", service.findAll());
+        model.addAttribute("message", "Hello secret player World!");
+        return "players";
+    }
 }
